@@ -1,0 +1,29 @@
+//From the slides >>>>>>>
+
+1.select * from emp;
+
+2.select distinct ename from emp;
+
+3.select ename , sal , sal+500 "Bonus" from emp;
+
+4.select ename , sal , sal*12 "Annual" from emp;
+
+5.select ename , sal , sal+comm as Commision from emp;
+
+6.select ename , sal from emp where sal>=3000;
+
+7.select ename as name , sal salary from emp;
+
+8.select ename||' '||job "Name and Job" from emp;
+
+
+Lab task 1 >>>>>>
+1.select ename , deptno  from emp;
+
+2.select job from emp where deptno = 30;
+
+3.select loc "Location" from dept where deptno = 30;
+
+4.select ename , empno from emp where comm>0;
+
+5.select ename , deptno from emp where ename like  '%A%';
