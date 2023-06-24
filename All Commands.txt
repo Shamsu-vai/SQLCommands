@@ -17,7 +17,8 @@
 8.select ename||' '||job "Name and Job" from emp;
 
 
-Lab task 1 >>>>>>
+Lab task 1 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
 1.select ename , deptno  from emp;
 
 2.select job from emp where deptno = 30;
@@ -27,3 +28,69 @@ Lab task 1 >>>>>>
 4.select ename , empno from emp where comm>0;
 
 5.select ename , deptno from emp where ename like  '%A%';
+
+lab task 2 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+select ename , job,deptno from emp where job='CLERK';
+ 
+select ename , job,deptno from emp where job='MANAGER';
+ 
+select ename , sal , comm from emp where sal<=1200;
+ 
+select ename , sal , comm from emp where sal between 1000 and 1500;
+ 
+select empno ,ename , sal , sal , mgr from emp where mgr in (7902 , 7566,7788);
+ 
+select ename from emp where ename like '%A%';
+ 
+select ename ,mgr from emp where mgr is null;
+ 
+select ename , sal ,job from emp where sal>=1200 or job ='CLERK';
+ 
+select ename , sal ,job from emp where sal>=1200 and job ='CLERK';
+ 
+select ename , sal ,job from emp where job not in ('CLERK');
+ 
+select ename , sal ,job from emp where job ='CLERK' or job='ANALYST' and sal>=1200  ;
+
+select * from emp order by sal;
+ 
+select * from emp order by sal desc;
+ 
+select ename , sal , sal*12 "Annual" from emp order by "Annual";
+ 
+select empno , ename , deptno from emp where lower(ename)='king';
+ 
+select ename, concat(ename,job) ,length(ename), instr(ename,'A')
+from emp ;
+ 
+select round(45.923,2),round(45.923,0),round(45.923,-1) from dual;
+ 
+select empno ,ename , sal , mod(empno , sal) from emp;
+ 
+select ename , to_char (hiredate , 'fmDD Month YYYY') HIREDATE from emp;
+ 
+select ename , sal , comm , (sal*12)+nvl (comm,0) from  emp;
+ 
+select avg(sal), max(sal), min(sal), sum(sal) from emp where job like 'SALES%';
+
+select min(hiredate), max(hiredate) from emp;
+ 
+select count(*) from emp where deptno = 30;
+ 
+select count (comm) from emp where deptno = 30;
+
+select avg (comm) from emp;
+
+select avg (nvl (comm, 0)) from emp;
+ 
+select deptno, avg(sal) from emp group by deptno;
+
+select avg(sal) from emp group by deptno;
+
+select deptno, max(sal) from emp group by deptno having max(sal) > 2900;
+
+select job, sum(sal) PAYROLL from emp where job not like 'SALES%' group by job having sum(sal) > 5000 order by sum (sal);
+ 
+select max(avg(sal)) from emp group by deptno;
+ 
