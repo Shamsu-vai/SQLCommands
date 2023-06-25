@@ -127,3 +127,7 @@ insert into "Student Database"
 values ('GA-010','Elijah',301,75.25,'A','pass');
 
 select * from "Student Database";
+
+delete from "Student Database" where "ID"='targeted_ID';
+
+drop table "Student Database";
