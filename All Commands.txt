@@ -93,4 +93,37 @@ select deptno, max(sal) from emp group by deptno having max(sal) > 2900;
 select job, sum(sal) PAYROLL from emp where job not like 'SALES%' group by job having sum(sal) > 5000 order by sum (sal);
  
 select max(avg(sal)) from emp group by deptno;
+
+lab task 3 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
  
+create table "Student Database" (
+"ID" varchar(25),
+"Name" varchar(25),
+"Marks" number,
+"Percentage" number,
+"Grade" varchar(3),
+"Remark" varchar(10)
+);
+
+insert into "Student Database"
+values ('GA-001','Jhon',285,71.25,'A','pass');
+insert into "Student Database"
+values ('GA-002','Smith', 248 ,62,'B','pass');
+insert into "Student Database"
+values ('GA-003','Emma',329,82.25,'A+','pass');
+insert into "Student Database"
+values ('GA-004','Sandy',249,62.25,'B','pass');
+insert into "Student Database"
+values ('GA-005','Olivia',150,37.5,'F','fail');
+insert into "Student Database"
+values ('GA-006','James',187,46.25,'D','pass');
+insert into "Student Database"
+values ('GA-007','Eva',352,88,'A+','pass');
+insert into "Student Database"
+values ('GA-008','Noah',279,69.75,'B','pass');
+insert into "Student Database"
+values ('GA-009','Charlotte',282,70.5,'A','pass');
+insert into "Student Database"
+values ('GA-010','Elijah',301,75.25,'A','pass');
+
+select * from "Student Database";
