@@ -131,3 +131,25 @@ select * from "Student Database";
 delete from "Student Database" where "ID"='targeted_ID';
 
 drop table "Student Database";
+
+MID lab task >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+select * from salgrade;
+
+select deptno from dept;
+
+select (sal+sal*0.05) "5% Increment" from emp;
+
+select ename,sal,(sal+sal*0.05) "5% Increment" from emp;
+
+select * from emp where ename='BLAKE';
+
+select ename||' is hired on '||hiredate||' as a '||job "Description" from emp where hiredate
+between '17-dec-80' and '28-sep-81';
+
+describe emp;
+describe salgrade;
+describe dept;
+describe bonus;
+
+select distinct job from emp;
